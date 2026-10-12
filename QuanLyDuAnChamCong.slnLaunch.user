@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "API_GateWay\\API_GateWay.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "API_User\\API_User.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

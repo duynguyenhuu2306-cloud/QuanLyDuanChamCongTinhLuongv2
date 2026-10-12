@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\api_gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|solutionrelative:api_gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\api_gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|solutionrelative:api_gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\api_gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|solutionrelative:api_gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\quanlyduanchamcong\\controllers\\api_doimatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|solutionrelative:quanlyduanchamcong\\controllers\\api_doimatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\quanlyduanchamcong\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|solutionrelative:quanlyduanchamcong\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\quanlyduanchamcong\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|solutionrelative:quanlyduanchamcong\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{73068c07-fba1-453f-99ae-6edf972119b2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\appsettings.json",
+              "RelativeDocumentMoniker": "API_GateWay\\appsettings.json",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\appsettings.json",
+              "RelativeToolTip": "API_GateWay\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-08T03:36:29.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\Program.cs",
+              "RelativeDocumentMoniker": "API_GateWay\\Program.cs",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\Program.cs",
+              "RelativeToolTip": "API_GateWay\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T03:31:04.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "API_DoiMatKhau.cs",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
+              "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
+              "RelativeToolTip": "QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwDIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T03:09:03.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\ocelot.json",
+              "RelativeDocumentMoniker": "API_GateWay\\ocelot.json",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\ocelot.json",
+              "RelativeToolTip": "API_GateWay\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-08T01:44:21.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\ErrorResponse.cs",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\ErrorResponse.cs",
+              "RelativeToolTip": "QuanLyDuAnChamCong\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T01:23:36.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T01:22:04.229Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
