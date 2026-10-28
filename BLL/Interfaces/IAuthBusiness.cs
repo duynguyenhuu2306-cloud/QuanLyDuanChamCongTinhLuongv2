@@ -9,8 +9,6 @@ namespace BLL.Interfaces
     {
         LoginResponse Login(LoginRequest request);
 
-        Verify2FAResponse Verify2FA(Verify2FARequest request);
-
         int DoiMatKhau(string maNguoiDung, DoiMatKhauRequest request);
 
         TokenResponse RefreshAccessToken(string refreshToken);

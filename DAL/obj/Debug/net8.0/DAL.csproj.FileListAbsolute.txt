@@ -28,3 +28,12 @@ C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\obj\D
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\obj\Debug\net8.0\refint\DAL.dll
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\obj\Debug\net8.0\DAL.pdb
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\obj\Debug\net8.0\ref\DAL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\DAL.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\DAL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\DAL.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\bin\CodexCheck\Debug\net8.0\DAL.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\bin\CodexCheck\Debug\net8.0\DAL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\bin\CodexCheck\Debug\net8.0\DAL.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\bin\CodexCheck\Debug\net8.0\Model.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\DAL\bin\CodexCheck\Debug\net8.0\Model.pdb

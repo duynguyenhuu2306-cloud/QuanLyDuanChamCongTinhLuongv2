@@ -15,6 +15,8 @@ namespace DAL.Interfaces
 
         IEnumerable<CongViec> GetByDuAn(string maDuAn);
 
+        IEnumerable<CongViec> GetAssignedToUser(string maNguoiDung);
+
         int Create(CongViec congViec);
 
         int Update(CongViec congViec);

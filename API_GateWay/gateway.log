@@ -1,0 +1,630 @@
+Using launch settings from API_GateWay\Properties\launchSettings.json...
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7199
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000023, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phieuluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000015, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001B, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000017, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phancong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000013, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/chamcong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000021, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/nghiphep/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001F, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chinhsachluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001D, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chaybangluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000019, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/congviec/all' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001F, PreviousRequestId: -
+      The path '/api-admin/chinhsachluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000021, PreviousRequestId: -
+      The path '/api-user/nghiphep/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001B, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000019, PreviousRequestId: -
+      The path '/api-user/congviec/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000023, PreviousRequestId: -
+      The path '/api-user/phieuluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000015, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000013, PreviousRequestId: -
+      The path '/api-user/chamcong/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000017, PreviousRequestId: -
+      The path '/api-user/phancong/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001D, PreviousRequestId: -
+      The path '/api-admin/chaybangluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000015, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001B, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/nguoidung' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001F, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chinhsachluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000023, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phieuluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001D, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chaybangluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000019, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/congviec/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000021, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/nghiphep/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000017, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phancong/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000013, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/chamcong/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001F, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chinhsachluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000017, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!
+      Setting error response for request: GET /api-user/phancong/all
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000013, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/chamcong/pending
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000015, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001B, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!
+      Setting error response for request: GET /api-admin/nguoidung
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000019, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!
+      Setting error response for request: GET /api-user/congviec/all
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000023, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!
+      Setting error response for request: GET /api-user/phieuluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:0000001D, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chaybangluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4C:00000021, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/nghiphep/pending
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001F, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chaybangluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000021, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/chamcong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001F, PreviousRequestId: -
+      The path '/api-admin/chaybangluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000021, PreviousRequestId: -
+      The path '/api-user/chamcong/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001F, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chaybangluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000021, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/chamcong/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001D, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/nghiphep/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001D, PreviousRequestId: -
+      The path '/api-user/nghiphep/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001D, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/nghiphep/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001B, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phieuluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000023, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001B, PreviousRequestId: -
+      The path '/api-user/phieuluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000023, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001B, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phieuluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000023, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000013, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/congviec/all' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000013, PreviousRequestId: -
+      The path '/api-user/congviec/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000013, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/congviec/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000017, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000017, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000017, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/nguoidung' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000015, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phancong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000015, PreviousRequestId: -
+      The path '/api-user/phancong/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000015, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phancong/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001D, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/nghiphep/pending
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000021, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/chamcong/pending
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001B, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!
+      Setting error response for request: GET /api-user/phieuluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000013, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!
+      Setting error response for request: GET /api-user/congviec/all
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000017, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!
+      Setting error response for request: GET /api-admin/nguoidung
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000001F, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chaybangluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000015, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!
+      Setting error response for request: GET /api-user/phancong/all
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000019, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chinhsachluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000019, PreviousRequestId: -
+      The path '/api-admin/chinhsachluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000019, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chinhsachluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000023, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000019, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chinhsachluong
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000027, PreviousRequestId: -
+      Rate limiting is disabled for route '/api/core/login' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000027, PreviousRequestId: -
+      No authentication is required for the path '/api/core/login' in the route /api/core/login.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000027, PreviousRequestId: -
+      200 OK status code of request URI: https://localhost:7071/api/core/login
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002F, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/chamcong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002F, PreviousRequestId: -
+      The path '/api-user/chamcong/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002D, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phancong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002D, PreviousRequestId: -
+      The path '/api-user/phancong/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000039, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000039, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002F, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/chamcong/pending' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000037, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chinhsachluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000037, PreviousRequestId: -
+      The path '/api-admin/chinhsachluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000035, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chaybangluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000035, PreviousRequestId: -
+      The path '/api-admin/chaybangluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000037, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/chinhsachluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000035, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/chaybangluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002D, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/phancong/all' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000039, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/nguoidung' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000033, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phieuluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000033, PreviousRequestId: -
+      The path '/api-user/phieuluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002B, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/congviec/all' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000033, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/phieuluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002B, PreviousRequestId: -
+      The path '/api-user/congviec/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000031, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/nghiphep/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002B, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/congviec/all' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000031, PreviousRequestId: -
+      The path '/api-user/nghiphep/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000029, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000031, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/nghiphep/pending' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000029, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000029, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/duan' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000029, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/DuAn
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002D, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/PhanCong/all
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002B, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/CongViec/all
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000031, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/NghiPhep/pending
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000035, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/ChayBangLuong
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000033, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/PhieuLuong
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:0000002F, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/ChamCong/pending
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000039, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/NguoiDung
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4D:00000037, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/ChinhSachLuong
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000013, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/congviec/all' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000015, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phancong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000017, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000015, PreviousRequestId: -
+      The path '/api-user/phancong/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000013, PreviousRequestId: -
+      The path '/api-user/congviec/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000017, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000013, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/congviec/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000015, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phancong/all' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000017, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000019, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phieuluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000019, PreviousRequestId: -
+      The path '/api-user/phieuluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000019, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/phieuluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000017, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000013, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/congviec/all' was unauthenticated!
+      Setting error response for request: GET /api-user/congviec/all
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001B, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chaybangluong' via the EnableRateLimiting option.
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000015, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phancong/all' was unauthenticated!
+      Setting error response for request: GET /api-user/phancong/all
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001B, PreviousRequestId: -
+      The path '/api-admin/chaybangluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001B, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chaybangluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000019, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/phieuluong' was unauthenticated!
+      Setting error response for request: GET /api-user/phieuluong
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001B, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chaybangluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chaybangluong
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000021, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/chamcong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001F, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chinhsachluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001F, PreviousRequestId: -
+      The path '/api-admin/chinhsachluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000021, PreviousRequestId: -
+      The path '/api-user/chamcong/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001F, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/chinhsachluong' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!;
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000021, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/chamcong/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!;
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000023, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/nghiphep/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000023, PreviousRequestId: -
+      The path '/api-user/nghiphep/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000023, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/nghiphep/pending' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000021, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/chamcong/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/chamcong/pending
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000023, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/nghiphep/pending' was unauthenticated!
+      Setting error response for request: GET /api-user/nghiphep/pending
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001F, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/chinhsachluong' was unauthenticated!
+      Setting error response for request: GET /api-admin/chinhsachluong
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001D, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001D, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001D, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/nguoidung' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000001D, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!
+      Setting error response for request: GET /api-admin/nguoidung
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000027, PreviousRequestId: -
+      Rate limiting is disabled for route '/api/core/login' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000027, PreviousRequestId: -
+      No authentication is required for the path '/api/core/login' in the route /api/core/login.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000027, PreviousRequestId: -
+      200 OK status code of request URI: https://localhost:7071/api/core/login
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002D, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phancong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002B, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/congviec/all' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002D, PreviousRequestId: -
+      The path '/api-user/phancong/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002B, PreviousRequestId: -
+      The path '/api-user/congviec/all' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002D, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/phancong/all' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002B, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/congviec/all' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000029, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000029, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000029, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/duan' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002F, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/chamcong/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002F, PreviousRequestId: -
+      The path '/api-user/chamcong/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002F, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/chamcong/pending' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000031, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/nghiphep/{everything}' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000031, PreviousRequestId: -
+      The path '/api-user/nghiphep/pending' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000031, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/nghiphep/pending' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000035, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chaybangluong' via the EnableRateLimiting option.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000033, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/phieuluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000035, PreviousRequestId: -
+      The path '/api-admin/chaybangluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000033, PreviousRequestId: -
+      The path '/api-user/phieuluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000033, PreviousRequestId: -
+      Client has been authenticated for path '/api-user/phieuluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000035, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/chaybangluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000037, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/chinhsachluong' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000037, PreviousRequestId: -
+      The path '/api-admin/chinhsachluong' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000037, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/chinhsachluong' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000039, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000039, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000039, PreviousRequestId: -
+      Client has been authenticated for path '/api-admin/nguoidung' by 'AuthenticationTypes.Federation' scheme.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000037, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/ChinhSachLuong
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000029, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/DuAn
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000031, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/NghiPhep/pending
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000035, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/ChayBangLuong
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000039, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:45677/api/NguoiDung
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002B, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/CongViec/all
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002D, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/PhanCong/all
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:0000002F, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/ChamCong/pending
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4E:00000033, PreviousRequestId: -
+      200 OK status code of request URI: http://localhost:44567/api/PhieuLuong
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPADTNBKQ4F:00000003, PreviousRequestId: -
+      Rate limiting is disabled for route '/api/core/login' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPADTNBKQ4F:00000003, PreviousRequestId: -
+      No authentication is required for the path '/api/core/login' in the route /api/core/login.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPADTNBKQ4F:00000003, PreviousRequestId: -
+      200 OK status code of request URI: https://localhost:7071/api/core/login

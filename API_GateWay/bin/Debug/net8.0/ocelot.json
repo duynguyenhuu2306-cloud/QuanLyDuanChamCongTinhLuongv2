@@ -5,7 +5,9 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/api/core/login",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/core/login",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -16,42 +18,34 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/api/core/2fa/verify",
-      "UpstreamHttpMethod": [ "POST" ],
-      "DownstreamPathTemplate": "/api/core/2fa/verify",
+      "UpstreamPathTemplate": "/api/core/doi-mat-khau",
+      "UpstreamHttpMethod": [
+        "PUT"
+      ],
+      "DownstreamPathTemplate": "/api/core/doi-mat-khau",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7071
         }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/api/core/doi-mat-khau",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "DownstreamPathTemplate": "/api/core/doi-mat-khau",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8610
-        }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-admin/nguoidung",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/NguoiDung",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
@@ -60,29 +54,36 @@
     },
     {
       "UpstreamPathTemplate": "/api-admin/nguoidung/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/NguoiDung/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-admin/auditlog",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/AuditLog",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
@@ -91,29 +92,34 @@
     },
     {
       "UpstreamPathTemplate": "/api-admin/auditlog/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/AuditLog/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-admin/chinhsachluong",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/ChinhSachLuong",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
@@ -122,29 +128,53 @@
     },
     {
       "UpstreamPathTemplate": "/api-admin/chinhsachluong/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/ChinhSachLuong/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-admin/chaybangluong",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/ChayBangLuong",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api-admin/chaybangluong/{id}/generate",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/ChayBangLuong/{id}/generate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
@@ -153,29 +183,36 @@
     },
     {
       "UpstreamPathTemplate": "/api-admin/chaybangluong/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/ChayBangLuong/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 45677
+          "Port": 7044
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/duan",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/DuAn",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -184,29 +221,36 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/duan/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/DuAn/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/congviec",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/CongViec",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -215,29 +259,35 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/congviec/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/CongViec/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/phancong",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/PhanCong",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -246,29 +296,36 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/phancong/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/PhanCong/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/chamcong",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/ChamCong",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -277,29 +334,36 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/chamcong/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/ChamCong/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/nghiphep",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/NghiPhep",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -308,29 +372,38 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/nghiphep/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/NghiPhep/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
       }
     },
-
     {
       "UpstreamPathTemplate": "/api-user/phieuluong",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/PhieuLuong",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {
@@ -339,13 +412,69 @@
     },
     {
       "UpstreamPathTemplate": "/api-user/phieuluong/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/PhieuLuong/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44567
+          "Port": 7131
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api-user/congviec/all",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/CongViec/all",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api-user/chamcong/all",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/ChamCong/all",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api-user/nghiphep/all",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/NghiPhep/all",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
         }
       ],
       "AuthenticationOptions": {

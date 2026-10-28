@@ -14,7 +14,9 @@ namespace Model
         public DateTime Ngaybatdau { get; set; }
         public DateTime Ngayketthuc { get; set; }
         public decimal? Sogiolam { get; set; }
+        public string Lydo { get; set; }
         public string Trangthai { get; set; }
         public string Nguoiduyet { get; set; }
+        public string LydoTuChoi { get; set; }
     }
 }

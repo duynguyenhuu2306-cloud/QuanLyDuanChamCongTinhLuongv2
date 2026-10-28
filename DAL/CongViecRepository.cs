@@ -53,6 +53,13 @@ namespace DAL
                 new { Maduan = maDuAn });
         }
 
+        public IEnumerable<CongViec> GetAssignedToUser(string maNguoiDung) => _databaseHelper.Query<CongViec>(@"
+            SELECT CV.*
+            FROM CongViec CV
+            INNER JOIN PhanCong PC ON PC.Macongviec = CV.Macongviec
+            WHERE PC.Manguoidung = @Manguoidung
+            ORDER BY CV.Dateline ASC", new { Manguoidung = maNguoiDung });
+
         public int Create(CongViec congViec)
         {
             string sql = @"

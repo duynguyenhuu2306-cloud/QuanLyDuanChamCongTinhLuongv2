@@ -13,6 +13,10 @@
       {
         "Path": "API_User\\API_User.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "API_Admin\\API_Admin.csproj",
+        "Action": "Start"
       }
     ]
   }

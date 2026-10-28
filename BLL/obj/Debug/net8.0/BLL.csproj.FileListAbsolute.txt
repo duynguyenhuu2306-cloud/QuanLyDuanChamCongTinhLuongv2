@@ -32,3 +32,14 @@ C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\obj\D
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\obj\Debug\net8.0\refint\BLL.dll
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\obj\Debug\net8.0\BLL.pdb
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\obj\Debug\net8.0\ref\BLL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\obj\Debug\net8.0\BLL.sourcelink.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\BLL.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\BLL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\BLL.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\BLL.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\BLL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\BLL.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\DAL.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\Model.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\DAL.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\BLL\bin\CodexCheck\Debug\net8.0\Model.pdb

@@ -6,7 +6,7 @@ namespace API_User.Controllers.API_PM
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin,PM")]
+    [Authorize(Roles = "Admin,PM,Employee,Accountant")]
     public class DuAnController : ControllerBase
     {
         private readonly IDuAnBusiness _business;
@@ -18,9 +18,17 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/DuAn
         [HttpGet]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetAll()
         {
             return Ok(_business.GetAll());
+        }
+
+        [HttpGet("summary")]
+        public IActionResult GetSummary()
+        {
+            var projects = _business.GetAll().ToList();
+            return Ok(new { total = projects.Count });
         }
 
         // GET: api/DuAn/{id}
@@ -103,6 +111,7 @@ namespace API_User.Controllers.API_PM
 
         // POST: api/DuAn
         [HttpPost]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult Create([FromBody] DuAn duAn)
         {
             var result = _business.Create(duAn);
@@ -115,6 +124,7 @@ namespace API_User.Controllers.API_PM
 
         // PUT: api/DuAn/{id}
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult Update(
             string id,
             [FromBody] DuAn duAn)
@@ -131,6 +141,7 @@ namespace API_User.Controllers.API_PM
 
         // DELETE: api/DuAn/{id}
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult Delete(string id)
         {
             var result = _business.Delete(id);

@@ -7,7 +7,7 @@ namespace API_Admin.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,PM")]
     public class NguoiDungController : ControllerBase
     {
         private readonly INguoiDungBusiness _business;
@@ -21,7 +21,7 @@ namespace API_Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_business.GetAll());
+            return Ok(_business.GetAll().Select(ToSafeResponse));
         }
 
         // GET: api/NguoiDung/{id}
@@ -33,7 +33,7 @@ namespace API_Admin.Controllers
             if (data == null)
                 return NotFound();
 
-            return Ok(data);
+            return Ok(ToSafeResponse(data));
         }
 
         // GET: api/NguoiDung/username/{username}
@@ -45,18 +45,19 @@ namespace API_Admin.Controllers
             if (data == null)
                 return NotFound();
 
-            return Ok(data);
+            return Ok(ToSafeResponse(data));
         }
 
         // GET: api/NguoiDung/search?keyword=abc
         [HttpGet("search")]
         public IActionResult Search(string keyword)
         {
-            return Ok(_business.Search(keyword));
+            return Ok(_business.Search(keyword).Select(ToSafeResponse));
         }
 
         // POST: api/NguoiDung
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create([FromBody] NguoiDung nguoiDung)
         {
             var result = _business.Create(nguoiDung);
@@ -69,6 +70,7 @@ namespace API_Admin.Controllers
 
         // PUT: api/NguoiDung/{id}
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(
             string id,
             [FromBody] NguoiDung nguoiDung)
@@ -85,6 +87,7 @@ namespace API_Admin.Controllers
 
         // DELETE: api/NguoiDung/{id}
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(string id)
         {
             var result = _business.Delete(id);
@@ -94,5 +97,16 @@ namespace API_Admin.Controllers
 
             return Ok(result);
         }
+
+        private static object ToSafeResponse(NguoiDung user) => new
+        {
+            user.Manguoidung,
+            user.Tendangnhap,
+            user.Hoten,
+            user.Email,
+            user.Vaitro,
+            user.Ngaytao,
+            user.Trangthai
+        };
     }
 }

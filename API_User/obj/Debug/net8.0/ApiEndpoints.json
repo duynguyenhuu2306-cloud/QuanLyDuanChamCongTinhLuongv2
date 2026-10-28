@@ -117,6 +117,16 @@
   },
   {
     "ContainingType": "API_User.Controllers.API_Shared.ChamCongController",
+    "Method": "GetAllForDashboard",
+    "RelativePath": "api/ChamCong/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_Shared.ChamCongController",
     "Method": "GetMine",
     "RelativePath": "api/ChamCong/me",
     "HttpMethod": "GET",
@@ -176,6 +186,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_Shared.ChamCongController",
+    "Method": "GetSummary",
+    "RelativePath": "api/ChamCong/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -275,6 +295,16 @@
   },
   {
     "ContainingType": "API_User.Controllers.API_PM.CongViecController",
+    "Method": "GetAllForWorkspace",
+    "RelativePath": "api/CongViec/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_PM.CongViecController",
     "Method": "GetByDuAn",
     "RelativePath": "api/CongViec/duan/{maDuAn}",
     "HttpMethod": "GET",
@@ -334,6 +364,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_PM.CongViecController",
+    "Method": "GetSummary",
+    "RelativePath": "api/CongViec/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -463,6 +503,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API_User.Controllers.API_PM.DuAnController",
+    "Method": "GetSummary",
+    "RelativePath": "api/DuAn/summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API_User.Controllers.API_NhanVien.NghiPhepController",
     "Method": "GetAll",
     "RelativePath": "api/NghiPhep",
@@ -481,8 +531,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "nghiPhep",
-        "Type": "Model.NghiPhep",
+        "Name": "request",
+        "Type": "API_User.Models.NghiPhepRequest",
         "IsRequired": true
       }
     ],
@@ -518,8 +568,8 @@
         "IsRequired": true
       },
       {
-        "Name": "nghiPhep",
-        "Type": "Model.NghiPhep",
+        "Name": "request",
+        "Type": "API_User.Models.NghiPhepRequest",
         "IsRequired": true
       }
     ],
@@ -553,11 +603,6 @@
         "Name": "id",
         "Type": "System.String",
         "IsRequired": true
-      },
-      {
-        "Name": "nguoiDuyet",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -576,11 +621,62 @@
         "IsRequired": true
       },
       {
-        "Name": "nguoiDuyet",
+        "Name": "request",
+        "Type": "API_User.Models.TuChoiNghiPhepRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_NhanVien.NghiPhepController",
+    "Method": "GetAllForWorkspace",
+    "RelativePath": "api/NghiPhep/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_NhanVien.NghiPhepController",
+    "Method": "ExportCsv",
+    "RelativePath": "api/NghiPhep/export/csv",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tuNgay",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "denNgay",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "trangThai",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_NhanVien.NghiPhepController",
+    "Method": "GetMine",
+    "RelativePath": "api/NghiPhep/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -702,6 +798,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_PM.PhanCongController",
+    "Method": "GetAllForWorkspace",
+    "RelativePath": "api/PhanCong/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -871,6 +977,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_User.Controllers.API_Ketoan.PhieuLuongController",
+    "Method": "GetMine",
+    "RelativePath": "api/PhieuLuong/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

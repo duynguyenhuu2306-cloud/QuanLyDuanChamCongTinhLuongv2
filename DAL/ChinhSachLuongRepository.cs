@@ -95,7 +95,8 @@ namespace DAL
         {
             string sql = @"
                 DELETE FROM ChinhSachLuong
-                WHERE Machinhsach = @Machinhsach";
+                WHERE Machinhsach = @Machinhsach
+                  AND NOT EXISTS (SELECT 1 FROM PhieuLuong WHERE PhieuLuong.Machinhsach = ChinhSachLuong.Machinhsach)";
 
             return _databaseHelper.Execute(
                 sql,

@@ -22,5 +22,7 @@ namespace DAL.Interfaces
         int Delete(string maChayLuong);
 
         int Complete(string maChayLuong);
+
+        int GeneratePayslips(string maChayLuong);
     }
 }

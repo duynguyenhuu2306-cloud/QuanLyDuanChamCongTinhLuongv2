@@ -5,9 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Model;
 using Model.Auth;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -20,9 +18,6 @@ namespace BLL
         private readonly ITokenService _tokenService;
         private readonly IRefreshTokenRepository _refreshTokenRepository;
         private readonly IConfiguration _configuration;
-
-        private static readonly ConcurrentDictionary<string, OtpInfo>
-            _otpStore = new ConcurrentDictionary<string, OtpInfo>();
 
         public AuthBusiness(
     INguoiDungBusiness nguoiDungBusiness,
@@ -101,30 +96,39 @@ namespace BLL
                 }
             }
 
-            // Sinh OTP 6 chữ số bằng bộ sinh số ngẫu nhiên an toàn.
-            string otp = RandomNumberGenerator
-                .GetInt32(100000, 1000000)
-                .ToString();
+            string accessToken = _tokenService.GenerateAccessToken(
+                nguoiDung.Manguoidung,
+                nguoiDung.Email ?? "",
+                new[] { nguoiDung.Vaitro });
 
-            _otpStore[nguoiDung.Tendangnhap] = new OtpInfo
+            string refreshToken = _tokenService.GenerateRefreshToken();
+            var refreshTokenRecord = new RefreshTokenRecord
             {
-                OTP = otp,
-                ExpiredAt = DateTime.UtcNow.AddMinutes(5)
+                Manguoidung = nguoiDung.Manguoidung,
+                TokenHash = HashRefreshToken(refreshToken),
+                Ngaytao = DateTime.UtcNow,
+                Ngayhethan = DateTime.UtcNow.AddDays(
+                    _configuration.GetValue<int?>("JwtSettings:RefreshTokenExpirationDays") ?? 30)
             };
 
-            Debug.WriteLine(
-                $"[2FA] OTP của {nguoiDung.Tendangnhap}: {otp}");
-
-            Console.WriteLine(
-                $"[2FA] OTP của {nguoiDung.Tendangnhap}: {otp}");
+            if (_refreshTokenRepository.Create(refreshTokenRecord) <= 0)
+            {
+                return new LoginResponse
+                {
+                    Success = false,
+                    Message = "Không thể phát hành Refresh Token."
+                };
+            }
 
             return new LoginResponse
             {
                 Success = true,
-                Require2FA = true,
-                Message = "Đăng nhập thành công. Vui lòng nhập mã OTP 2FA.",
+                Message = "Đăng nhập thành công.",
                 MaNguoiDung = nguoiDung.Manguoidung,
-                Tendangnhap = nguoiDung.Tendangnhap
+                Tendangnhap = nguoiDung.Tendangnhap,
+                VaiTro = nguoiDung.Vaitro,
+                Token = accessToken,
+                RefreshToken = refreshToken
             };
         }
 
@@ -220,106 +224,6 @@ namespace BLL
             return Convert.ToHexString(bytes);
         }
 
-        public Verify2FAResponse Verify2FA(Verify2FARequest request)
-        {
-            if (request == null ||
-                string.IsNullOrWhiteSpace(request.Tendangnhap) ||
-                string.IsNullOrWhiteSpace(request.OTP))
-            {
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Dữ liệu xác thực không hợp lệ."
-                };
-            }
-
-            if (!_otpStore.TryGetValue(
-                request.Tendangnhap,
-                out OtpInfo otpInfo))
-            {
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Không tìm thấy mã OTP."
-                };
-            }
-
-            if (DateTime.UtcNow >= otpInfo.ExpiredAt)
-            {
-                _otpStore.TryRemove(request.Tendangnhap, out _);
-
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Mã OTP đã hết hạn."
-                };
-            }
-
-            if (!string.Equals(
-                otpInfo.OTP,
-                request.OTP,
-                StringComparison.Ordinal))
-            {
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Mã OTP không chính xác."
-                };
-            }
-
-            var nguoiDung = _nguoiDungBusiness
-                .GetByUsername(request.Tendangnhap);
-
-            if (nguoiDung == null || !nguoiDung.Trangthai)
-            {
-                _otpStore.TryRemove(request.Tendangnhap, out _);
-
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Tài khoản không tồn tại hoặc đã bị khóa."
-                };
-            }
-
-            _otpStore.TryRemove(request.Tendangnhap, out _);
-
-            string accessToken = _tokenService.GenerateAccessToken(
-                nguoiDung.Manguoidung,
-                nguoiDung.Email ?? "",
-                new[] { nguoiDung.Vaitro });
-
-            string refreshToken = _tokenService.GenerateRefreshToken();
-
-            var refreshTokenRecord = new RefreshTokenRecord
-            {
-                Manguoidung = nguoiDung.Manguoidung,
-                TokenHash = HashRefreshToken(refreshToken),
-                Ngaytao = DateTime.UtcNow,
-                Ngayhethan = DateTime.UtcNow.AddDays(
-                    _configuration.GetValue<int?>(
-                        "JwtSettings:RefreshTokenExpirationDays") ?? 30)
-            };
-
-            int inserted = _refreshTokenRepository.Create(refreshTokenRecord);
-
-            if (inserted <= 0)
-            {
-                return new Verify2FAResponse
-                {
-                    Success = false,
-                    Message = "Không thể lưu Refresh Token."
-                };
-            }
-
-            return new Verify2FAResponse
-            {
-                Success = true,
-                Message = "Xác thực 2FA thành công.",
-                Token = accessToken,
-                RefreshToken = refreshToken
-            };
-        }
-
         public int DoiMatKhau(
             string maNguoiDung,
             DoiMatKhauRequest request)
@@ -393,10 +297,5 @@ namespace BLL
                  password.StartsWith("$2y$"));
         }
 
-        private class OtpInfo
-        {
-            public string OTP { get; set; }
-            public DateTime ExpiredAt { get; set; }
-        }
     }
 }

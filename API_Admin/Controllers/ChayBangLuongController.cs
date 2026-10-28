@@ -90,10 +90,22 @@ namespace API_Admin.Controllers
         {
             var result = _business.Complete(id);
 
-            if (result <= 0)
-                return NotFound();
+            if (result <= 0) return Conflict("Chỉ hoàn tất kỳ lương Draft sau khi đã tạo phiếu lương.");
 
             return Ok(result);
+        }
+
+        [HttpPost("{id}/generate")]
+        public IActionResult GeneratePayslips(string id)
+        {
+            var run = _business.GetById(id);
+            if (run == null) return NotFound("Không tìm thấy kỳ lương.");
+            if (run.Trangthai != "Draft") return BadRequest("Chỉ có thể tính lương cho kỳ đang ở trạng thái Draft.");
+
+            var inserted = _business.GeneratePayslips(id);
+            return inserted <= 0
+                ? BadRequest("Không tạo được phiếu lương. Hãy kiểm tra chính sách lương có hiệu lực trước ngày kết thúc kỳ.")
+                : Ok(new { created = inserted });
         }
     }
 }

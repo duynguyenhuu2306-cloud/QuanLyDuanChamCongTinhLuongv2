@@ -179,6 +179,18 @@
         }
       }
     },
+    "/api/ChamCong/all": {
+      "get": {
+        "tags": [
+          "ChamCong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ChamCong/week": {
       "get": {
         "tags": [
@@ -202,6 +214,18 @@
       }
     },
     "/api/ChamCong/pending": {
+      "get": {
+        "tags": [
+          "ChamCong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ChamCong/summary": {
       "get": {
         "tags": [
           "ChamCong"
@@ -332,6 +356,30 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CongViec/summary": {
+      "get": {
+        "tags": [
+          "CongViec"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CongViec/all": {
+      "get": {
+        "tags": [
+          "CongViec"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -555,6 +603,18 @@
         }
       }
     },
+    "/api/DuAn/summary": {
+      "get": {
+        "tags": [
+          "DuAn"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DuAn/{id}": {
       "get": {
         "tags": [
@@ -727,21 +787,33 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NghiPhep/all": {
+      "get": {
+        "tags": [
+          "NghiPhep"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -788,17 +860,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/NghiPhep"
+                "$ref": "#/components/schemas/NghiPhepRequest"
               }
             }
           }
@@ -852,6 +924,18 @@
         }
       }
     },
+    "/api/NghiPhep/me": {
+      "get": {
+        "tags": [
+          "NghiPhep"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/NghiPhep/pending": {
       "get": {
         "tags": [
@@ -872,6 +956,51 @@
         "parameters": [
           {
             "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/NghiPhep/export/csv": {
+      "get": {
+        "tags": [
+          "NghiPhep"
+        ],
+        "parameters": [
+          {
+            "name": "tuNgay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "denNgay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "loai",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "trangThai",
             "in": "query",
             "schema": {
               "type": "string"
@@ -898,13 +1027,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "nguoiDuyet",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -927,15 +1049,27 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "nguoiDuyet",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TuChoiNghiPhepRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TuChoiNghiPhepRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TuChoiNghiPhepRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -977,6 +1111,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PhanCong/all": {
+      "get": {
+        "tags": [
+          "PhanCong"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1336,6 +1482,18 @@
           }
         }
       }
+    },
+    "/api/PhieuLuong/me": {
+      "get": {
+        "tags": [
+          "PhieuLuong"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1438,17 +1596,9 @@
         },
         "additionalProperties": false
       },
-      "NghiPhep": {
+      "NghiPhepRequest": {
         "type": "object",
         "properties": {
-          "manghiphep": {
-            "type": "string",
-            "nullable": true
-          },
-          "manguoidung": {
-            "type": "string",
-            "nullable": true
-          },
           "loainghiphep": {
             "type": "string",
             "nullable": true
@@ -1466,11 +1616,7 @@
             "format": "double",
             "nullable": true
           },
-          "trangthai": {
-            "type": "string",
-            "nullable": true
-          },
-          "nguoiduyet": {
+          "lydo": {
             "type": "string",
             "nullable": true
           }
@@ -1553,6 +1699,16 @@
         "additionalProperties": false
       },
       "TuChoiChamCongRequest": {
+        "type": "object",
+        "properties": {
+          "lydoTuChoi": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TuChoiNghiPhepRequest": {
         "type": "object",
         "properties": {
           "lydoTuChoi": {

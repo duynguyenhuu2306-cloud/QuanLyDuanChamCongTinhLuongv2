@@ -170,6 +170,22 @@
   },
   {
     "ContainingType": "API_Admin.Controllers.ChayBangLuongController",
+    "Method": "GeneratePayslips",
+    "RelativePath": "api/ChayBangLuong/{id}/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Admin.Controllers.ChayBangLuongController",
     "Method": "Search",
     "RelativePath": "api/ChayBangLuong/search",
     "HttpMethod": "GET",

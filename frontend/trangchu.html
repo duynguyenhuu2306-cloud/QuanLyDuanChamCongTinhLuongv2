@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Quản lý dự án &amp; chấm công</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" id="homeLogo" href="#dashboard" aria-label="Quản lý dự án và chấm công - về tổng quan"><span class="brand-mark">Q</span><span class="brand-name">Quản lý dự án &amp; chấm công</span></a>
+      <div class="workspace-switch"><span class="workspace-icon">A</span><span><b>Acme Studio</b><small>Không gian làm việc</small></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">TỔNG QUAN</div>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Tổng quan</button>
+        <button class="nav-item" data-page="projects"><span class="nav-icon">▦</span>Dự án</button>
+        <button class="nav-item" data-page="tasks"><span class="nav-icon">☷</span>Công việc</button>
+        <button class="nav-item" data-page="attendance"><span class="nav-icon">◷</span>Chấm công <span class="nav-dot"></span></button>
+        <button class="nav-item" data-page="leave"><span class="nav-icon">▧</span>Nghỉ phép & OT</button>
+        <button class="nav-item" data-page="payroll"><span class="nav-icon">＄</span>Bảng lương</button>
+      </nav>
+      <div class="nav-label manage-label">QUẢN LÝ</div>
+      <nav class="main-nav">
+        <button class="nav-item" data-page="people"><span class="nav-icon">♙</span>Nhân sự</button>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▤</span>Báo cáo</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✦</span><b>Cần hỗ trợ?</b><p>Đội ngũ Workly luôn sẵn sàng giúp bạn.</p><button>Trung tâm trợ giúp <span>↗</span></button></div><button class="profile" id="profileButton" type="button" aria-label="Mở thông tin tài khoản"><span class="avatar avatar-purple" id="sidebarAccountAvatar">AN</span><span><b id="sidebarAccountName">Tài khoản</b><small id="sidebarAccountRole">Đang đăng nhập</small></span><span class="more">···</span></button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button><div class="breadcrumbs"><span>Workspace</span><span class="crumb-sep">/</span><b id="breadcrumbCurrent">Tổng quan</b></div><div class="top-actions"><label class="search-box"><span>⌕</span><input id="globalSearch" placeholder="Tìm kiếm..." aria-label="Tìm kiếm"><kbd>⌘ K</kbd></label><button class="icon-button" aria-label="Trợ giúp">?</button><button class="notification icon-button" aria-label="Thông báo">♧<i></i></button><button id="signOut" class="btn btn-quiet signout-button">Đăng xuất</button><span class="top-divider"></span><button class="account-trigger" id="accountButton" type="button" aria-label="Mở thông tin tài khoản"><span class="avatar avatar-purple" id="topAccountAvatar">AN</span></button></div></header>
+      <section class="page-content" id="pageContent"></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="enhancements.js"></script>
+</body>
+</html>

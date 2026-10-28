@@ -31,11 +31,13 @@ namespace BLL
 
         public int Create(ChinhSachLuong chinhSach)
         {
+            if (!IsValid(chinhSach)) return 0;
             return _repository.Create(chinhSach);
         }
 
         public int Update(ChinhSachLuong chinhSach)
         {
+            if (!IsValid(chinhSach)) return 0;
             return _repository.Update(chinhSach);
         }
 
@@ -53,6 +55,11 @@ namespace BLL
         {
             return _repository.Search(keyword);
         }
+
+        private static bool IsValid(ChinhSachLuong policy) =>
+            policy != null && !string.IsNullOrWhiteSpace(policy.Machinhsach) &&
+            policy.Luonggiocoban >= 0 && policy.Hesonhanlamthem >= 1 &&
+            !string.IsNullOrWhiteSpace(policy.Quytaclamtron);
 
 
     }

@@ -8,7 +8,7 @@ namespace API_User.Controllers.API_PM
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin,PM")]
+    [Authorize(Roles = "Admin,PM,Employee")]
     public class PhanCongController : ControllerBase
     {
         private readonly IPhanCongBusiness _business;
@@ -20,13 +20,21 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/PhanCong
         [HttpGet]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetAll()
         {
             return Ok(_business.GetAll());
         }
 
+        [HttpGet("all")]
+        [Authorize(Roles = "Admin,PM,Employee")]
+        public IActionResult GetAllForWorkspace() => Ok(User.IsInRole("Employee")
+            ? _business.GetByNguoiDung(CurrentUserId())
+            : _business.GetAll());
+
         // GET: api/PhanCong/{id}
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetById(string id)
         {
             var data = _business.GetById(id);
@@ -39,6 +47,7 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/PhanCong/congviec/{maCongViec}
         [HttpGet("congviec/{maCongViec}")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetByCongViec(string maCongViec)
         {
             return Ok(_business.GetByCongViec(maCongViec));
@@ -46,6 +55,7 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/PhanCong/nguoidung/{maNguoiDung}
         [HttpGet("nguoidung/{maNguoiDung}")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetByNguoiDung(string maNguoiDung)
         {
             return Ok(_business.GetByNguoiDung(maNguoiDung));
@@ -53,6 +63,7 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/PhanCong/paging?pageNumber=1&pageSize=10
         [HttpGet("paging")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult GetPaged(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10)
@@ -86,6 +97,7 @@ namespace API_User.Controllers.API_PM
 
         // GET: api/PhanCong/search?keyword=PC&pageNumber=1&pageSize=10
         [HttpGet("search")]
+        [Authorize(Roles = "Admin,PM")]
         public IActionResult Search(
             [FromQuery] string keyword = "",
             [FromQuery] int pageNumber = 1,

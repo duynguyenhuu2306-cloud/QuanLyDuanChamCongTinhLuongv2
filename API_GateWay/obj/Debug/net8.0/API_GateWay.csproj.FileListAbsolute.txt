@@ -98,10 +98,11 @@ C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateW
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\staticwebassets.development.json
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\API_Gate.FD825F40.Up2Date
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\API_GateWay.dll
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\refint\API_GateWay.dll
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\API_GateWay.pdb
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\API_GateWay.genruntimeconfig.cache
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\ref\API_GateWay.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\API_GateWay.sourcelink.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

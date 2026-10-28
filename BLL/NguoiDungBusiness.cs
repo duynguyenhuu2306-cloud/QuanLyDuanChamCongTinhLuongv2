@@ -47,9 +47,9 @@ namespace BLL
             if (nguoiDung == null)
                 return 0;
 
-            // Nếu mật khẩu chưa phải BCrypt hash thì mới mã hóa.
-            // Nếu đã là hash thì giữ nguyên, tránh hash 2 lần.
-            if (string.IsNullOrEmpty(nguoiDung.matkhau) ||
+            // Mật khẩu để trống nghĩa là giữ mật khẩu hiện tại.
+            // Chỉ mã hóa khi người quản trị nhập mật khẩu mới.
+            if (!string.IsNullOrWhiteSpace(nguoiDung.matkhau) &&
                 !nguoiDung.matkhau.StartsWith("$2"))
             {
                 nguoiDung.matkhau =

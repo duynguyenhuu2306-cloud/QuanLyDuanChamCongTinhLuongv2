@@ -33,6 +33,8 @@ namespace BLL
             return _repository.GetByDuAn(maDuAn);
         }
 
+        public IEnumerable<CongViec> GetAssignedToUser(string maNguoiDung) => _repository.GetAssignedToUser(maNguoiDung);
+
         public int Create(CongViec congViec)
         {
             return _repository.Create(congViec);

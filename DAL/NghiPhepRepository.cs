@@ -1,177 +1,87 @@
-﻿using DAL.Helper.Interfaces;
+using DAL.Helper.Interfaces;
 using DAL.Interfaces;
 using Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
     public class NghiPhepRepository : INghiPhepRepository
     {
         private readonly IDatabaseHelper _databaseHelper;
+        public NghiPhepRepository(IDatabaseHelper databaseHelper) => _databaseHelper = databaseHelper;
 
-        public NghiPhepRepository(IDatabaseHelper databaseHelper)
-        {
-            _databaseHelper = databaseHelper;
-        }
+        public IEnumerable<NghiPhep> GetAll() => _databaseHelper.Query<NghiPhep>(@"
+            SELECT * FROM NghiPhep ORDER BY Ngaybatdau DESC, Manghiphep DESC");
 
-        public IEnumerable<NghiPhep> GetAll()
-        {
-            string sql = @"
-                SELECT *
-                FROM NghiPhep
-                ORDER BY Ngaybatdau DESC";
+        public NghiPhep GetById(string maNghiPhep) => _databaseHelper.QueryFirstOrDefault<NghiPhep>(@"
+            SELECT * FROM NghiPhep WHERE Manghiphep = @Manghiphep", new { Manghiphep = maNghiPhep });
 
-            return _databaseHelper.Query<NghiPhep>(sql);
-        }
+        public IEnumerable<NghiPhep> GetByNguoiDung(string maNguoiDung) => _databaseHelper.Query<NghiPhep>(@"
+            SELECT * FROM NghiPhep WHERE Manguoidung = @Manguoidung
+            ORDER BY Ngaybatdau DESC, Manghiphep DESC", new { Manguoidung = maNguoiDung });
 
-        public NghiPhep GetById(string maNghiPhep)
-        {
-            string sql = @"
-                SELECT *
-                FROM NghiPhep
-                WHERE Manghiphep = @Manghiphep";
+        public IEnumerable<NghiPhep> GetPending() => _databaseHelper.Query<NghiPhep>(@"
+            SELECT * FROM NghiPhep WHERE Trangthai = 'Pending' ORDER BY Ngaybatdau DESC");
 
-            return _databaseHelper.QueryFirstOrDefault<NghiPhep>(
-                sql,
-                new { Manghiphep = maNghiPhep });
-        }
+        public bool CanReviewerReview(string maNghiPhep, string maNguoiDuyet) =>
+            _databaseHelper.ExecuteScalar<int>(@"
+                SELECT COUNT(*)
+                FROM NghiPhep NP
+                WHERE NP.Manghiphep = @Manghiphep
+                  AND NP.Trangthai = 'Pending'
+                  AND EXISTS (
+                    SELECT 1 FROM PhanCong PC
+                    INNER JOIN CongViec CV ON CV.Macongviec = PC.Macongviec
+                    INNER JOIN DuAn DA ON DA.Maduan = CV.Maduan
+                    WHERE PC.Manguoidung = NP.Manguoidung AND DA.Nguoitao = @Nguoiduyet
+                  )", new { Manghiphep = maNghiPhep, Nguoiduyet = maNguoiDuyet }) > 0;
 
-        public IEnumerable<NghiPhep> GetByNguoiDung(string maNguoiDung)
-        {
-            string sql = @"
-                SELECT *
-                FROM NghiPhep
-                WHERE Manguoidung = @Manguoidung
-                ORDER BY Ngaybatdau DESC";
+        public IEnumerable<NghiPhep> Search(string keyword) => _databaseHelper.Query<NghiPhep>(@"
+            SELECT * FROM NghiPhep
+            WHERE Manghiphep LIKE @Keyword OR Manguoidung LIKE @Keyword OR Loainghiphep LIKE @Keyword
+               OR Trangthai LIKE @Keyword OR Nguoiduyet LIKE @Keyword OR Lydo LIKE @Keyword
+            ORDER BY Ngaybatdau DESC", new { Keyword = "%" + (keyword ?? "") + "%" });
 
-            return _databaseHelper.Query<NghiPhep>(
-                sql,
-                new { Manguoidung = maNguoiDung });
-        }
+        public decimal GetTotalOtHoursForDay(string maNguoiDung, DateTime ngay, string excludeMaNghiPhep = null) =>
+            _databaseHelper.ExecuteScalar<decimal>(@"
+                SELECT COALESCE(SUM(Sogiolam), 0) FROM NghiPhep
+                WHERE Manguoidung = @Manguoidung AND Loainghiphep = 'OT'
+                  AND CAST(Ngaybatdau AS date) = CAST(@Ngay AS date)
+                  AND Trangthai IN ('Pending', 'Approved')
+                  AND (@ExcludeId IS NULL OR Manghiphep <> @ExcludeId)",
+                new { Manguoidung = maNguoiDung, Ngay = ngay, ExcludeId = excludeMaNghiPhep });
 
-        public IEnumerable<NghiPhep> GetPending()
-        {
-            string sql = @"
-                SELECT *
-                FROM NghiPhep
-                WHERE Trangthai = 'Pending'
-                ORDER BY Ngaybatdau DESC";
+        public bool HasOverlappingLeave(string maNguoiDung, DateTime ngayBatDau, DateTime ngayKetThuc, string excludeMaNghiPhep = null) =>
+            _databaseHelper.ExecuteScalar<int>(@"
+                SELECT COUNT(*) FROM NghiPhep
+                WHERE Manguoidung = @Manguoidung AND Loainghiphep = 'Leave'
+                  AND Trangthai IN ('Pending', 'Approved')
+                  AND Ngaybatdau <= @Ngayketthuc AND Ngayketthuc >= @Ngaybatdau
+                  AND (@ExcludeId IS NULL OR Manghiphep <> @ExcludeId)",
+                new { Manguoidung = maNguoiDung, Ngaybatdau = ngayBatDau, Ngayketthuc = ngayKetThuc, ExcludeId = excludeMaNghiPhep }) > 0;
 
-            return _databaseHelper.Query<NghiPhep>(sql);
-        }
+        public int Create(NghiPhep nghiPhep) => _databaseHelper.Execute(@"
+            INSERT INTO NghiPhep (Manghiphep, Manguoidung, Loainghiphep, Ngaybatdau, Ngayketthuc,
+                Sogiolam, Lydo, Trangthai, Nguoiduyet, LydoTuChoi)
+            VALUES (@Manghiphep, @Manguoidung, @Loainghiphep, @Ngaybatdau, @Ngayketthuc,
+                @Sogiolam, @Lydo, @Trangthai, @Nguoiduyet, @LydoTuChoi)", nghiPhep);
 
-        public IEnumerable<NghiPhep> Search(string keyword)
-        {
-            string sql = @"
-                SELECT *
-                FROM NghiPhep
-                WHERE Manghiphep LIKE @Keyword
-                   OR Manguoidung LIKE @Keyword
-                   OR Loainghiphep LIKE @Keyword
-                   OR Trangthai LIKE @Keyword
-                   OR Nguoiduyet LIKE @Keyword
-                ORDER BY Ngaybatdau DESC";
+        public int Update(NghiPhep nghiPhep) => _databaseHelper.Execute(@"
+            UPDATE NghiPhep SET Loainghiphep = @Loainghiphep, Ngaybatdau = @Ngaybatdau,
+                Ngayketthuc = @Ngayketthuc, Sogiolam = @Sogiolam, Lydo = @Lydo,
+                Trangthai = @Trangthai, Nguoiduyet = @Nguoiduyet, LydoTuChoi = @LydoTuChoi
+            WHERE Manghiphep = @Manghiphep", nghiPhep);
 
-            return _databaseHelper.Query<NghiPhep>(
-                sql,
-                new { Keyword = "%" + keyword + "%" });
-        }
+        public int Delete(string maNghiPhep) => _databaseHelper.Execute(
+            "DELETE FROM NghiPhep WHERE Manghiphep = @Manghiphep", new { Manghiphep = maNghiPhep });
 
-        public int Create(NghiPhep nghiPhep)
-        {
-            string sql = @"
-                INSERT INTO NghiPhep
-                (
-                    Manghiphep,
-                    Manguoidung,
-                    Loainghiphep,
-                    Ngaybatdau,
-                    Ngayketthuc,
-                    Sogiolam,
-                    Trangthai,
-                    Nguoiduyet
-                )
-                VALUES
-                (
-                    @Manghiphep,
-                    @Manguoidung,
-                    @Loainghiphep,
-                    @Ngaybatdau,
-                    @Ngayketthuc,
-                    @Sogiolam,
-                    @Trangthai,
-                    @Nguoiduyet
-                )";
+        public int Approve(string maNghiPhep, string nguoiDuyet) => _databaseHelper.Execute(@"
+            UPDATE NghiPhep SET Trangthai = 'Approved', Nguoiduyet = @Nguoiduyet, LydoTuChoi = NULL
+            WHERE Manghiphep = @Manghiphep AND Trangthai = 'Pending'",
+            new { Manghiphep = maNghiPhep, Nguoiduyet = nguoiDuyet });
 
-            return _databaseHelper.Execute(sql, nghiPhep);
-        }
-
-        public int Update(NghiPhep nghiPhep)
-        {
-            string sql = @"
-                UPDATE NghiPhep
-                SET
-                    Manguoidung = @Manguoidung,
-                    Loainghiphep = @Loainghiphep,
-                    Ngaybatdau = @Ngaybatdau,
-                    Ngayketthuc = @Ngayketthuc,
-                    Sogiolam = @Sogiolam,
-                    Trangthai = @Trangthai,
-                    Nguoiduyet = @Nguoiduyet
-                WHERE Manghiphep = @Manghiphep";
-
-            return _databaseHelper.Execute(sql, nghiPhep);
-        }
-
-        public int Delete(string maNghiPhep)
-        {
-            string sql = @"
-                DELETE FROM NghiPhep
-                WHERE Manghiphep = @Manghiphep";
-
-            return _databaseHelper.Execute(
-                sql,
-                new { Manghiphep = maNghiPhep });
-        }
-
-        public int Approve(string maNghiPhep, string nguoiDuyet)
-        {
-            string sql = @"
-                UPDATE NghiPhep
-                SET
-                    Trangthai = 'Approved',
-                    Nguoiduyet = @Nguoiduyet
-                WHERE Manghiphep = @Manghiphep";
-
-            return _databaseHelper.Execute(
-                sql,
-                new
-                {
-                    Manghiphep = maNghiPhep,
-                    Nguoiduyet = nguoiDuyet
-                });
-        }
-
-        public int Reject(string maNghiPhep, string nguoiDuyet)
-        {
-            string sql = @"
-                UPDATE NghiPhep
-                SET
-                    Trangthai = 'Rejected',
-                    Nguoiduyet = @Nguoiduyet
-                WHERE Manghiphep = @Manghiphep";
-
-            return _databaseHelper.Execute(
-                sql,
-                new
-                {
-                    Manghiphep = maNghiPhep,
-                    Nguoiduyet = nguoiDuyet
-                });
-        }
+        public int Reject(string maNghiPhep, string nguoiDuyet, string lyDoTuChoi) => _databaseHelper.Execute(@"
+            UPDATE NghiPhep SET Trangthai = 'Rejected', Nguoiduyet = @Nguoiduyet, LydoTuChoi = @LydoTuChoi
+            WHERE Manghiphep = @Manghiphep AND Trangthai = 'Pending'",
+            new { Manghiphep = maNghiPhep, Nguoiduyet = nguoiDuyet, LydoTuChoi = lyDoTuChoi });
     }
 }

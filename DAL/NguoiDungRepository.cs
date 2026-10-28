@@ -119,7 +119,10 @@ namespace DAL
         UPDATE NguoiDung
         SET
             Tendangnhap = @Tendangnhap,
-            matkhau = @matkhau,
+            matkhau = CASE
+                WHEN NULLIF(@matkhau, '') IS NULL THEN matkhau
+                ELSE @matkhau
+            END,
             Hoten = @Hoten,
             Email = @Email,
             Vaitro = @Vaitro,

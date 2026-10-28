@@ -20,3 +20,10 @@ C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\obj
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\obj\Debug\net8.0\refint\Model.dll
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\obj\Debug\net8.0\Model.pdb
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\obj\Debug\net8.0\ref\Model.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\obj\Debug\net8.0\Model.sourcelink.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\Model.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\Model.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\.validation-build\API_Admin\Model.pdb
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\bin\CodexCheck\Debug\net8.0\Model.deps.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\bin\CodexCheck\Debug\net8.0\Model.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\Model\bin\CodexCheck\Debug\net8.0\Model.pdb

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\quanlyduanchamcong\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD3249B-53E0-4DB3-9980-50CDFC01633D}|QuanLyDuAnChamCong\\QuanLyDuAnChamCong.csproj|solutionrelative:quanlyduanchamcong\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|c:\\ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\quanlychamcong_test\\api_gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{914B86C0-2959-4AEA-A220-98BB18C9CD62}|API_GateWay\\API_GateWay.csproj|solutionrelative:api_gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\Program.cs",
+              "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\Program.cs",
+              "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\Program.cs",
+              "RelativeToolTip": "QuanLyDuAnChamCong\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T01:26:13.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\appsettings.json",
               "RelativeDocumentMoniker": "API_GateWay\\appsettings.json",
@@ -86,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\Program.cs",
               "RelativeDocumentMoniker": "API_GateWay\\Program.cs",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "API_DoiMatKhau.cs",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
               "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\Controllers\\API_DoiMatKhau.cs",
@@ -110,20 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ocelot.json",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\ocelot.json",
               "RelativeDocumentMoniker": "API_GateWay\\ocelot.json",
               "ToolTip": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\API_GateWay\\ocelot.json",
               "RelativeToolTip": "API_GateWay\\ocelot.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABoBAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-10-08T01:44:21.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ErrorResponse.cs",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\ErrorResponse.cs",
               "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\ErrorResponse.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GlobalExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Ph\u00E1t tri\u1EC3n ph\u1EA7n m\u1EC1m h\u01B0\u1EDBng d\u1ECBch v\u1EE5\\QuanLyChamCong_test\\QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "QuanLyDuAnChamCong\\GlobalExceptionMiddleware.cs",

@@ -5,37 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/core/2fa/verify": {
-      "post": {
-        "tags": [
-          "API_2FA"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Verify2FARequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Verify2FARequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Verify2FARequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/core/login": {
       "post": {
         "tags": [
@@ -123,20 +92,6 @@
             "nullable": true
           },
           "matkhau": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Verify2FARequest": {
-        "type": "object",
-        "properties": {
-          "tendangnhap": {
-            "type": "string",
-            "nullable": true
-          },
-          "otp": {
             "type": "string",
             "nullable": true
           }

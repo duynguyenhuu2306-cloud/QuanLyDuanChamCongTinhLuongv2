@@ -42,6 +42,10 @@ namespace API_User.Controllers.API_Shared
             return Ok(data);
         }
 
+        [HttpGet("all")]
+        [Authorize(Roles = "Admin,PM,Accountant")]
+        public IActionResult GetAllForDashboard() => Ok(_business.GetAll());
+
         [HttpGet("week")]
         [Authorize(Roles = "Employee")]
         public IActionResult GetMyWeek([FromQuery] DateTime? ngayTrongTuan)
@@ -58,6 +62,21 @@ namespace API_User.Controllers.API_Shared
         [HttpGet("pending")]
         [Authorize(Roles = "Admin,PM")]
         public IActionResult GetPending() => Ok(_business.GetPending());
+
+        [HttpGet("summary")]
+        [Authorize(Roles = "Admin,PM")]
+        public IActionResult GetSummary()
+        {
+            var rows = _business.GetAll().ToList();
+            return Ok(new
+            {
+                total = rows.Count,
+                pending = rows.Count(x => x.Trangthai == "Pending"),
+                approved = rows.Count(x => x.Trangthai == "Approved"),
+                rejected = rows.Count(x => x.Trangthai == "Rejected"),
+                approvedHours = rows.Where(x => x.Trangthai == "Approved").Sum(x => x.Sogiolam ?? 0)
+            });
+        }
 
         [HttpGet("search")]
         [Authorize(Roles = "Admin,PM,Accountant")]

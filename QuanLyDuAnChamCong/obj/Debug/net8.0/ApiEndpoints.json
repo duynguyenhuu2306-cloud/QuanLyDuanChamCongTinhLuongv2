@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "QuanLyDuAnChamCong.Controllers.API_2FA",
-    "Method": "Verify",
-    "RelativePath": "api/core/2fa/verify",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Model.Auth.Verify2FARequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "API_Core.Controllers.DoiMatKhauController",
     "Method": "DoiMatKhau",
     "RelativePath": "api/core/doi-mat-khau",

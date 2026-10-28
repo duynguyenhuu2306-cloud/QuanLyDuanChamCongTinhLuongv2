@@ -30,11 +30,19 @@ namespace BLL
 
         public int Create(ChayBangLuong chayBangLuong)
         {
+            if (chayBangLuong == null || string.IsNullOrWhiteSpace(chayBangLuong.Machayluong) ||
+                chayBangLuong.Ngayketthuckyluong.Date < chayBangLuong.Ngaybatdaukyluong.Date)
+                return 0;
+            chayBangLuong.Trangthai = "Draft";
             return _repository.Create(chayBangLuong);
         }
 
         public int Update(ChayBangLuong chayBangLuong)
         {
+            if (chayBangLuong == null || string.IsNullOrWhiteSpace(chayBangLuong.Machayluong) ||
+                chayBangLuong.Ngayketthuckyluong.Date < chayBangLuong.Ngaybatdaukyluong.Date)
+                return 0;
+            chayBangLuong.Trangthai = "Draft";
             return _repository.Update(chayBangLuong);
         }
 
@@ -47,6 +55,8 @@ namespace BLL
         {
             return _repository.Complete(maChayLuong);
         }
+
+        public int GeneratePayslips(string maChayLuong) => _repository.GeneratePayslips(maChayLuong);
 
         public IEnumerable<ChayBangLuong> Search(string keyword)
         {

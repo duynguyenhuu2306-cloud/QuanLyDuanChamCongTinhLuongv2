@@ -21,6 +21,8 @@ namespace BLL.Interfaces
 
         int Complete(string maChayLuong);
 
+        int GeneratePayslips(string maChayLuong);
+
         IEnumerable<ChayBangLuong> Search(string keyword);
     }
 }

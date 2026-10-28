@@ -1,0 +1,91 @@
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:7199
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\API_GateWay
+warn: Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MA:00000001, PreviousRequestId: -
+      DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+      UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /swagger/v1/swagger.json
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MA:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /swagger/v1/swagger.json
+      Setting error response for request: GET /swagger/v1/swagger.json
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPAD8V1D6MB:00000001, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MB:00000001, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MB:00000001, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MB:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPAD8V1D6MC:00000001, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-admin/nguoidung' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MC:00000001, PreviousRequestId: -
+      The path '/api-admin/nguoidung' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MC:00000001, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-admin/nguoidung' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MC:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-admin/nguoidung' was unauthenticated!
+      Setting error response for request: GET /api-admin/nguoidung
+warn: Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MD:00000001, PreviousRequestId: -
+      DownstreamRouteFinderMiddleware setting pipeline errors because DownstreamRouteFinder returned the following ->
+      UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /api/core/login
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MD:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnableToFindDownstreamRouteError: Failed to match route configuration for upstream: GET /api/core/login
+      Setting error response for request: GET /api/core/login
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPAD8V1D6ME:00000001, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6ME:00000001, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6ME:00000001, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6ME:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPAD8V1D6MF:00000001, PreviousRequestId: -
+      Rate limiting is disabled for route '/api-user/duan' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MF:00000001, PreviousRequestId: -
+      The path '/api-user/duan' is an authenticated route! AuthenticationMiddleware checking if client is authenticated...
+warn: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MF:00000001, PreviousRequestId: -
+      Client has NOT been authenticated for path '/api-user/duan' and pipeline error set. UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!;
+warn: Ocelot.Responder.Middleware.ResponderMiddleware[0]
+      RequestId: 0HNPAD8V1D6MF:00000001, PreviousRequestId: -
+      ResponderMiddleware found 1 error ->
+      UnauthenticatedError: Request for authenticated route '/api-user/duan' was unauthenticated!
+      Setting error response for request: GET /api-user/duan
+info: Ocelot.RateLimiting.RateLimitingMiddleware[0]
+      RequestId: 0HNPAD8V1D6MH:00000003, PreviousRequestId: -
+      Rate limiting is disabled for route '/api/core/login' via the EnableRateLimiting option.
+info: Ocelot.Authentication.AuthenticationMiddleware[0]
+      RequestId: 0HNPAD8V1D6MH:00000003, PreviousRequestId: -
+      No authentication is required for the path '/api/core/login' in the route /api/core/login.
+info: Ocelot.Requester.Middleware.HttpRequesterMiddleware[0]
+      RequestId: 0HNPAD8V1D6MH:00000003, PreviousRequestId: -
+      200 OK status code of request URI: https://localhost:7071/api/core/login

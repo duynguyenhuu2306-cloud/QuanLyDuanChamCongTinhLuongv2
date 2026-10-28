@@ -276,6 +276,28 @@
         }
       }
     },
+    "/api/ChayBangLuong/{id}/generate": {
+      "post": {
+        "tags": [
+          "ChayBangLuong"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ChinhSachLuong": {
       "get": {
         "tags": [

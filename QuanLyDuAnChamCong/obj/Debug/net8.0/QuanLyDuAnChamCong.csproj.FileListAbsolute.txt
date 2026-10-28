@@ -189,7 +189,8 @@ C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuA
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\staticwebassets.development.json
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\QuanLyDu.4918C1D7.Up2Date
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\QuanLyDuAnChamCong.genruntimeconfig.cache
 C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\ref\QuanLyDuAnChamCong.dll
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\QuanLyDuAnChamCong.sourcelink.json
+C:\Phát triển phần mềm hướng dịch vụ\QuanLyChamCong_test\QuanLyDuAnChamCong\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

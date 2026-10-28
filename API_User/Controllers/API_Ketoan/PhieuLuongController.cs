@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model;
+using System.Security.Claims;
 
 namespace API_User.Controllers.API_Ketoan
 {
@@ -53,6 +54,16 @@ namespace API_User.Controllers.API_Ketoan
         public IActionResult GetByNguoiDung(string maNguoiDung)
         {
             return Ok(_business.GetByNguoiDung(maNguoiDung));
+        }
+
+        [HttpGet("me")]
+        [Authorize(Roles = "Employee")]
+        public IActionResult GetMine()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return string.IsNullOrWhiteSpace(userId)
+                ? Unauthorized()
+                : Ok(_business.GetByNguoiDung(userId));
         }
 
         // POST: api/PhieuLuong
